@@ -1,0 +1,529 @@
+/********** Global declarations ***********/
+
+:root {
+  
+  /********** primary colors **********/
+  --primary-background: white;
+  --primary-danger: red;
+  --primary-success: green;
+  --primary-light: #f3f5f7;
+  --primary-color: #20b2bf;
+  --title-color: #002e5d;
+  --primary-active-border: #c8ced5;
+  --primary-label : rgba(0, 0, 0, 0.6);
+  --primary-master  : #FFD532;
+  --primary-footer : rgba(0,0,0,0.02);
+
+
+
+  --primary-border: #c8ced5;
+  --primary-border-radius: 5px;
+  --primary-border-width: 1px;
+
+  /*********** secondary colors ***********/
+
+  --secondary-background: #f7f9fd;
+  --secondary-border: #2794e3;
+
+   /************** breakpoints ****************/
+   --phone  : 600px ;
+   --big-phone :  768px;
+   --tablet :  992px;
+   --laptop : 1200px;
+
+}
+
+/********* fonts used in the  app **********/
+/* @font-face {
+  font-family: titleFont;
+  src: url(NexaBold/FontsFree-Net-n1.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: bodyFont;
+  src: url(Helvetica/Helvetica.ttf);
+  font-display: swap;
+} */
+/**************** font ends here ***************/
+
+/**  these tags only used in the title of the page***/
+h1,
+h2 {
+  font-family: titleFont;
+  line-height: 90%;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+p,
+h3,
+h4,
+h5,
+h6,
+small,
+label,
+input a .label {
+  font-family: bodyFont;
+  vertical-align: middle;
+}
+.title {
+  color: var(--title-color);
+}
+
+html {
+  font-size: calc(60% + 0.8vmin);
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow-x: hidden;
+}
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: var(--secondary-background);
+}
+
+.inspect {
+  background-color: var(--primary-danger);
+}
+.ff{
+  font-family: var(titleFont);
+}
+.ff2{
+  font-family: var(bodyFont);
+}
+
+/*************** style for date picker **********/
+[type="date"] {
+  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+input[type="date"] {
+  display: -webkit-inline-flex;
+  font-family: monospace;
+  overflow: hidden;
+  padding: 0;
+  -webkit-padding-start: 1px;
+}
+input[type='date']::placeholder{
+  color:  var(--primary-border);
+  font-size: small;
+
+}
+
+#date-picker {
+  width:  97%;
+  padding: 10px ;
+  font-size: medium;
+  outline: none;
+  border-radius:  var(--primary-border-radius);
+  border:  1px solid var(--primary-border);
+  font-family:  bodyFont;
+  margin-right: 200px !important;
+}
+#date-picker:active {
+   border:  1px solid var(--primary-active-border);
+}
+label {
+  color: var(--primary-label);
+}
+
+input::placeholder {
+  font-size: small;
+}
+
+/*********************** Switch transition *************/
+
+.fade-enter{
+  opacity: 0;
+}
+.fade-exit{
+  opacity: 1;
+}
+.fade-enter-active{
+  opacity: 1;
+}
+.fade-exit-active{
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-exit-active{
+  transition: opacity 10ms ease-in-out;
+}
+
+
+
+/***********  common css ***************/
+.text-center {
+  text-align: center;
+}
+.nav-logo {
+  cursor: pointer;
+aspect-ratio: 3/1;
+width: 100%;
+}
+
+.required-label::after {
+  content:  ' *';
+  color: red;
+}
+
+/***********  amount input ****************/
+.label-box {
+margin-bottom: 2px;
+margin-top: 10px;
+color: var(--primary-border);
+}
+
+.amount-input-box {
+  position: relative;
+}
+.amount-input-box .icon {
+  position: absolute;
+  font-size: large;
+  top: 10px;
+  right: 10px;
+  color: var(--primary-border);
+}
+.amount-input-box #amount-input {
+  width: 100%;
+  font-size: medium;
+  font-family: bodyFont;
+  padding: 10px;
+  outline: none;
+  box-sizing: border-box;
+  border: 1px solid var(--primary-border);
+  border-radius: var(--primary-border-radius);
+}
+#amount-input:focus .label-box {
+  color: var(--primary-main) !important;
+}
+
+.amount-input-box #amount-input:focus {
+  border: 1px solid var(--primary-color);
+}
+
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.start-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.space-between-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-box-align: center;
+  -webkit-box-align: center;
+}
+
+.end-box {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  -moz-box-align: center;
+  -webkit-box-align: center;
+}
+.content-box {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.required {
+  color: var(--primary-danger);
+}
+
+.input-error {
+  border: 1px solid var(--primary-danger) !important;
+}
+.error-icon {
+  color: var(--primary-danger) !important;
+}
+.input-error-message {
+  color: var(--primary-danger);
+  font-family: bodyFont;
+}
+.link {
+  color: var(--primary-color);
+  cursor: pointer;
+  text-decoration: none;
+  text-underline-offset: none;
+  font-family: bodyFont;
+}
+.link:focus {
+  text-decoration: none;
+}
+.comming-soon-image {
+  width: 200px;
+  height: 100px;
+}
+
+.error-message {
+  color: var(--primary-danger);
+}
+
+/**    for video screen **********/
+video {
+  width: 100% !important;
+}
+
+/**************************** hide the input arrow for number**/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/**************** END ***************/
+
+/****************** scrollbar css ******************/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  height: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/*********** global loader style  ********/
+.global-loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-background);
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+}
+.global-loader img {
+  aspect-ratio: 3/1;
+}
+/*********************** global responsivness handling r************************/
+@media screen and (max-width : 990px){
+.logo {
+aspect-ratio:  3/2;
+}  
+.global-loader img {
+  aspect-ratio: 3/2;
+}
+}
+/* * END **/
+
+
+
+
+/* @font-face {
+    font-family: titleFont;
+    src: url(NexaBold/NexaBold/FontsFree-Net-n1.ttf);
+  }
+  .ff{
+    font-family: titleFont;
+  } */
+  .check{
+    color: red;
+  }
+  .cb{
+    margin-left: 30px;
+  }
+  .firstbar{
+    align-items: center;
+    font-size: 18px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    font-weight: 200;
+    /* justify-content: center; */
+  }
+  .textbar1div{
+    
+  }
+.icon1{
+  margin-right: -596px;
+  float: right;
+  border-radius: 30px;
+}
+.text2{
+  color: #5462d1;
+  font-size: 37px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 80px;
+  padding-left: 428px;
+  padding-right: 428px;
+}
+.text3{
+  color:#61657d;
+  text-align: center;
+  font-weight:300;
+  font-size: 20px;
+}
+.imag1{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  height: 200px;
+  width: 1200px;
+  margin-left: 160px;
+}
+.mtext{
+    text-align: center;
+    color: #61657d;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+.ib{
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  margin-top: 10px;
+  margin-bottom: 90px;
+}
+.bar7{
+  font-size: 35px;
+  color: #25262d;
+  font-weight: 100;
+  margin: 0 auto;
+  line-height: 1.2;
+  max-width: 820px
+}
+.text7{
+  font-weight: 100;
+}
+.blocks{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 60px;
+}
+.b1text{
+  color: #5462d1;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+.b2text{
+  color: #5462d1;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+
+}
+.b3text{
+  color: #5462d1;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+.starpac{
+  display: flex;
+  justify-content: center;
+}
+.star{
+  font-size: 90px;
+  color: #f4867a;
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
