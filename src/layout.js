@@ -11,26 +11,41 @@ import Sect9 from './Sect9'
 import Stars from './Stars'
 import ResponsiveAppBar from './components/ncheck'
 import Carousel from './Carousel'
+import Resec2 from './resec2'
+import Footer from './Footer'
+import Bottom from './Bottom'
+import Subscribe from './Subscribe'
+
 
 const Layout = () => {
   return (
     <div>
+      <div style={{position:'fixed', top:0, left:0, right:0}}>
       <Bar1/> 
-      <Sect2/>
-      <Button/>
-      <div className="imag1">
-      <img src={pic} alt="Here is image" />
+      <Navbar/>
       </div>
+      <div style={{paddingTop:'130px',marginBottom:'-258px', backgroundColor:'var(--primary-color)'}}>
+      <Resec2/>
+      </div>
+      <Button/>
       <h5 className='mtext'>As seen on</h5>
       <ImageBundle/>
+      <div style={{backgroundColor:'white'}}>
       <Sect7/>
       <Sect8/>
-      <h3 style={{textTransform:'uppercase',textAlign:'center',fontSize:'24px'}}>mortgagae with confidence</h3>
-      <div style={{maxWidth:'700px',marginLeft:'400px',marginBottom:'50px'}}>
+      <h3 style={{textTransform:'uppercase',textAlign:'center',fontSize:'24px'}}>mortgage with confidence</h3>
+      <div className='mwc'style={{maxWidth:'700px',marginLeft:'25vw',marginBottom:'50px'}}>
       <h2 style={{textAlign:'center',fontSize:"36px",fontWeight:'100',color:'#5462d1'}}>We only work with first-time buyers, so we’re really good at it.</h2>
       </div>
       <Sect9/>
       <Stars/>
+      <Subscribe/>
+      </div>
+      <div className="footmargin">
+      <Footer/>
+      </div>
+      <div style={{borderBottom:'1px solid black', marginTop:'50px', width:'78vw',marginLeft:'110px'}}></div>
+      <Bottom/>
     </div>
     
   )
