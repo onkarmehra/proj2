@@ -7,7 +7,7 @@ import time from '../images/Time.webp'
 
 const ImageBundle = () => {
   return (
-    <div className='ib'>
+    <div className='ib' style={{backgroundColor:'var(--primary-color)'}}>
         <img className='pic pic1' src={wsj} alt="Wall Street Journal" />
         <img className='pic pic2' src={cnbc} alt="cnbc" />
         <img className='pic pic3' src={bloomberg} alt="bloomberg" />

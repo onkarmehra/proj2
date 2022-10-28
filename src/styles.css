@@ -363,6 +363,7 @@ aspect-ratio:  3/2;
     display: flex;
     justify-content: center;
     font-weight: 200;
+    height: 58px;
     /* justify-content: center; */
   }
   .textbar1div{
@@ -454,76 +455,230 @@ aspect-ratio:  3/2;
   font-size: 90px;
   color: #f4867a;
 }
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-
-/* Slideshow container */
-.slideshow-container {
-  position: relative;
-  background: #f1f1f1f1;
+nav{
+  background-color: white;
+  margin-top: -15px;
+  height: 70px;
 }
+nav li{
+  float:right;
+  list-style: none; 
+  margin: 20px 20px;
 
-/* Slides */
-.mySlides {
-  display: none;
-  padding: 80px;
-  text-align: center;
 }
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -30px;
-  padding: 16px;
-  color: #888;
+nav ul{
+  overflow: auto;
+}
+.logoin{
+  float: left;
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  margin-left: 175px;
+  }
+.links{
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+.links:hover{
+  color: red;
+}
+.btn1{
+  background: #5462d1;
+  box-shadow: 0px 3px 6px #00000000;
+  border-radius: 26px;
+  color: #fff;
+  transition: .4s;
+  padding: 14px 26px;
+  border-color: #5462d1;
+  height: 50px;;
+  width: 220px;
+  font-size: 18px;
   font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  margin-top: -10px;
 }
-
-/* Position the "next button" to the right */
-.next {
-  position: absolute;
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.hc{
+  margin-right: 200px;
 }
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-  color: white;
+li{
+  list-style: none;
 }
+.fh2{
+  margin-left: 38px;
+}
+.f2ul li{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.f3ul li{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.f3{
+  margin-left: -60px;
+}
+.pp{
+  text-align: right;
+  border-right: 1px solid black;
+  padding-right: 5px;
+}
+.mnotice1{
+  text-align: left;
+  border-left: 1px solid black;
+  padding-left: 8px;
+}
+.rs1text1{
+  font-size: 50px;
+}
+@media (max-width: 850px) and (min-width:550px){
+  .house{
+    min-height: 60vh;
+    max-width: 70vw;
+    padding-top: 10px;
+    padding-left: 10vw;
+  }
+}
+@media (max-width:549px) and (min-width:460px){
+  .house{
+    min-height: 30vh;
+    max-width: 60vw;
+    padding-top: 5vw;
+    padding-left: 25vw;
+  }
+  
+}
+@media (max-width:459px) and (min-width:390px){
+  .house{
+    min-height: 0.5vh;
+    max-width: 50vw;
+    padding-top: 8vw;
+    padding-left: 35vw;
+  }}
+@media (max-width:390px){
+  .house{
+    min-height: 0.3vh;
+    max-width: 50vw;
+    padding-top: 2px;
+    padding-left: 35vw;
+  }
+  
+}
+  @media (max-width: 850px){
+    .pic{
+      width: 20vw;
+      height: auto;
+    }
+  }
+  @media (max-width: 870px){
+    .con{
+        margin-left: 20px;
+        text-align: center;
+      }
+      .rs1text1{
+        font-size: 7vw;
+        font-weight: 400;
+    }
+  }
+  @media (max-width:555px) {
+    .firbtn{
+      /* min-height: 0.5vh; */
+      max-height: 5vh;
+      margin-top: 50px;
+    }
+    
+  }
+@media (max-width:872px) {
+  .bar7{
+    margin: 25px;
+  }
+}
+@media (max-width:1200px) {
+  .div2{
+    max-width: 10%;
+    width: 20%;
+    margin-left: -10vw;
+  }
+  .div2 img{
+    max-width: 52vw;
+    margin-left: 5px;
 
-/* The dot/bullet/indicator container */
-.dot-container {
+  }
+  .div1{
+    max-width: 40vw;
+  }
+}
+@media (max-width:1600px) {
+
+  .mwc{
+   margin-right: 25vw; 
+  }
+}
+@media (max-width:697px) {
+  .iconsub{
     text-align: center;
-    padding: 20px;
-    background: #ddd;
+  }
 }
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+@media (max-width: 600px) {
+  .iconsiz{
+    max-width: 18vw;
+  }
 }
-
-/* Add a background color to the active dot/circle */
-.active, .dot:hover {
-  background-color: #717171;
+@media (max-width:462px) {
+  .subsinput{
+    max-width: 40vw;
+    padding: 2px;
+  }
 }
+@media (max-width:1055px) {
+  .f2{
+    margin-left: -55px;
+    margin-right: 5px;
+  }
+  .f3{
+    margin-left: -35px;
+    margin-right: 5px;
+  }
+  .f1{
+    margin-left: -120px;
+  }
+}
+@media (max-width:475px) {
+  .footmargin{
+    margin-top: 20px;
+  }
+  
+}
+@media (max-width:1250px) and (min-width:904px){
+  .mainsocial{
+   margin-right: -150px;
+  }}
+@media (max-width:904px) {
+  .mainsocial{
+    justify-content: center;
 
-/* Add an italic font style to all quotes */
-q {font-style: italic;}
-
-/* Add a blue color to the author */
-.author {color: cornflowerblue;}
+   }
+}  
+@media (max-width:1191px) and (min-width:898px)
+{
+  .mnotice{
+    margin-left: -14vw;
+  }
+  .tos{
+    margin-right:15vw;
+  }
+}
+@media (max-width:900px) {
+  .tos{
+    text-align: center;
+  }
+}
+@media (max-width:900px) {
+  .pp{
+    text-align: center;
+  }
+  .mnotice1{
+    text-align: center;
+  }
+}

@@ -1,22 +1,22 @@
 import React from 'react'
-import bell from './images/bell.webp'
-import rate from './images/rate.webp'
-import sms from './images/sms.webp'
+import {SiBlockchaindotcom} from "react-icons/si";
+import { GiMeepleCircle } from "react-icons/gi";
+import {MdChat} from "react-icons/md";
 
 const Sect9 = () => {
   return (
     <div className='blocks'>
         <div className="block1">
-            <img style={{height:'150px',width:'150px', justifyContent:'center', marginLeft:'36px'}} src={bell} alt="bell" />
-            <p  className='b1text'>Personalized Mortgage Advice</p>
+            <GiMeepleCircle className='iconsiz' color='var(--primary-color)' style={{height:'110px',width:'110px', justifyContent:'center', marginLeft:'40px'}}/>
+            <p className='b1text iconsub'>Decentralised Identity</p>
         </div>
         <div className="block2">
-            <img style={{height:'150px',width:'150px', justifyContent:'center', marginLeft:'41px'}} src={rate} alt="rate" />
-            <p className='b2text'>Guaranteed Low Mortgage Rates</p>
+            <SiBlockchaindotcom className='iconsiz' color='var(--primary-color)' style={{height:'110px',width:'110px', justifyContent:'center', marginLeft:'70px'}}/>
+            <p className='b2text iconsub'>Blockchain-based marketplace</p>
         </div>
         <div className="block3">
-            <img style={{height:'150px',width:'150px', justifyContent:'center', marginLeft:'38px'}} src={sms} alt="sms" />
-            <p className='b3text'>24/7 Access to Mortgage Experts</p>
+            <MdChat className='iconsiz' color='var(--primary-color)' style={{height:'110px',width:'110px', justifyContent:'center', marginLeft:'75px'}}/>
+            <p className='b3text iconsub'>24/7 Access to Mortgage Experts</p>
         </div>
 
     </div>
